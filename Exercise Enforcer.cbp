@@ -35,7 +35,7 @@
 		</Compiler>
 		<Unit filename="ExerciseEnforcer.cpp" />
 		<Unit filename="ExerciseEnforcer.h" />
-		<Unit filename="V 0.2.cpp" />
+		<Unit filename="main0.3.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

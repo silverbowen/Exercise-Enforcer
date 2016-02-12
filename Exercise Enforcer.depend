@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1455300205 source:/home/silverbowen/Git/Exercise-Enforcer/ExerciseEnforcer.cpp
+	"ExerciseEnforcer.h"
+
+1455298699 /home/silverbowen/Git/Exercise-Enforcer/ExerciseEnforcer.h
+	<string>
+	<iostream>
+	<limits>
+
+1455302090 source:/home/silverbowen/Git/Exercise-Enforcer/main0.3.cpp
+	"ExerciseEnforcer.h"
+	<time.h>
+	<unistd.h>
+	<SFML/Audio.hpp>
+
