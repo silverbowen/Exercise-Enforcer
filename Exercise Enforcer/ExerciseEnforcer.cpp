@@ -1,13 +1,11 @@
 #include "ExerciseEnforcer.h"
-using namespace std;
 
-ExerciseEnforcer::ExerciseEnforcer()
-    : exercise("Not specified"), interval(0), reps(0) {} //ctor
+ExerciseEnforcer::ExerciseEnforcer() {} //ctor
 
-ExerciseEnforcer::ExerciseEnforcer(const string& exercise = "Not Defined", int interval = 0, int reps = 0)
+ExerciseEnforcer::ExerciseEnforcer(const std::string& exercise, int interval, int reps)
     : exercise(exercise), interval(interval), reps(reps) {} //ctor
 
-void ExerciseEnforcer::setExercise(const string& exercise)
+void ExerciseEnforcer::setExercise(const std::string& exercise)
 {
     this->exercise = exercise;
 }
@@ -20,7 +18,24 @@ void ExerciseEnforcer::setReps(int reps)
     this->reps = reps;
 }
 
-const string& ExerciseEnforcer::getExercise() const
+void ExerciseEnforcer::readExercise(std::istream& input)
+{
+    getline(input, this->exercise);
+}
+void ExerciseEnforcer::readInterval(std::istream& input)
+{
+    input >> this->interval;
+    std::cin.clear();  // reset stream and ignore, prevents bad input screen loop
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void ExerciseEnforcer::readReps(std::istream& input)
+{
+    input >> this->reps;
+    std::cin.clear();  // reset stream and ignore, prevents bad input screen loop
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+
+const std::string& ExerciseEnforcer::getExercise() const
 {
     return exercise;
 }
@@ -32,4 +47,3 @@ int ExerciseEnforcer::getReps() const
 {
     return reps;
 }
-
