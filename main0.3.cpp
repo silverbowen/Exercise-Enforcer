@@ -1,5 +1,4 @@
 #include "ExerciseEnforcer.h"
-#include <time.h>
 #include <unistd.h>
 #include <SFML/Audio.hpp>
 
@@ -8,9 +7,6 @@ void countdown(const int interval);
 int main()
 {
     ExerciseEnforcer myEE; // create ExerciseEnforcer object
-
-    time_t current_time = 0, // to time the interval
-           target_time = 0; // to time the interval
 
     do // while loop gets exercise
     {
@@ -38,10 +34,6 @@ int main()
             std::cout << "\nInterval must be positive!\n\n"; // mild error checking
     }
     while (myEE.getInterval() <= 0);
-
-    time(&current_time);
-    time(&target_time);
-    target_time += myEE.getInterval() * 60;
 
     for (int i = 1; i <= myEE.getReps(); ++i)
     {
